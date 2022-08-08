@@ -1,0 +1,27 @@
+2) Program to check whether a number is armstrong or not
+----------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,temp,sum=0,r;
+    printf("enter a number");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0)
+    {
+        r=n%10;
+        sum=sum+(r*r*r);
+        n=n/10;
+    }
+    if(sum==temp)
+    printf("ARMSTRONG NUMBER");
+    else
+    printf("NOT ARMSTRONG NUMBER");
+}
+-----------------------------------------------------------------------------
+OUTPUT:
+enter a number 153
+ARMSTRONG NUMBER
+enter a number 151
+NOT ARMSTRONG NUMBER
+******************************************************************************
