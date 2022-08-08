@@ -1,3 +1,5 @@
+1) Program to find oddcount and even count of a given number and print output accordingly
+-----------------------------------------------------------------------------------------
 #include<stdio.h>
 int main()
 {
