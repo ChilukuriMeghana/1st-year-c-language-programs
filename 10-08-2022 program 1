@@ -1,0 +1,31 @@
+1)  C program to read a number and print number is "Harshad Number" or "Not Harshad Number"
+-----------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,r,temp;
+    printf("enter a number");
+    scanf("%d",&n);
+    temp=n;
+    while(n!=0)
+    {
+        r=n%10;
+        sum=sum+r;
+        n=n/10;
+    }
+    if(temp%sum==0)
+    {
+        printf("given number is Harshad number");
+    }
+    else
+    {
+        printf("given number is not Harshad number");
+    }
+}
+-----------------------------------------------------------------------------
+OUTPUT:
+enter a number 156
+given number is Harshad number
+enter a number 22
+given number is not Harshad number
+***********************************************************************
