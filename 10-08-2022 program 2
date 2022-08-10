@@ -1,0 +1,38 @@
+1) program to read a number 'n'.Read x ,y values and replace "x" value with "y" value
+------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,x,y,i=1,a[100],sum=0,r,count=0;
+    printf("enter a number");
+    scanf("%d",&n);
+    printf("enter x,y values");
+    scanf("%d%d",&x,&y);
+    while(n!=0)
+    {
+        r=n%10;
+        count++;
+        a[i]=r;
+        i++;
+        n=n/10;
+    }
+    
+    for(i=1;i<=count;i++)
+    {
+        if(a[i]==x)
+        {
+            a[i]=y;
+        }
+    }
+    for(i=count;i>=1;i--)
+    {
+        sum=sum*10+a[i];
+    }
+    printf("\n%d",sum);
+}
+----------------------------------------------------------------------------------------------------------------
+OUTPUT:
+enter a number 16918
+enter x,y values 1 7
+76978
+****************************************************************************************************
