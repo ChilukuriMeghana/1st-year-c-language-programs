@@ -1,0 +1,28 @@
+1) program to find missing number from array of n consecutive numbers.
+---------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int a[100],sum=0,sum1=0,k,i;
+    printf("enter k value\n");
+    scanf("%d",&k);
+    for(i=1;i<=k-1;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    sum=(k*(k+1))/2;
+    for(i=1;i<=k;i++)
+    {
+        sum1=sum1+a[i];
+    }
+    printf("missing number is %d",sum-sum1);
+}
+----------------------------------------------------------------
+OUTPUT:
+enter k value 5
+1
+2
+3
+5
+missing number is 4
+**********************************************************
