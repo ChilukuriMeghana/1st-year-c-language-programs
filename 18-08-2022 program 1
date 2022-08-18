@@ -1,0 +1,52 @@
+1) program to print UNIQUE if all elements of array are different otherwise print DUPLICATE 
+-----------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int a[100],i,j,n,flag=0;
+    printf("enter size of array");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);   
+    }
+    for(i=1;i<=n;i++) // i=1 i=2
+    {
+        for(j=i+1;j<=n;j++) 
+        {
+            if(a[i]==a[j])
+            {
+                flag=1;
+                break;
+            }
+        }
+    }
+    if(flag==1)
+    {
+        printf("DUPLICATE");
+    }
+    else
+    {
+        printf("UNIQUE");
+    }
+}
+-------------------------------------------------------------
+OUTPUT:
+enter size of array 7
+1
+2
+3
+3
+4
+5
+8
+DUPLICATE
+----------------------------------------------
+enter size of array 5
+1
+2
+3
+6
+7
+UNIQUE
+*******************************************
