@@ -1,0 +1,36 @@
+1) program to find sum of factorials of all numbers of array
+---------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,i,j,a[100],k,sum=0,fact=1;
+    printf("enter size of array");  
+    scanf("%d",&n);
+    printf("enter elements");  
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=1;i<=n;i++)    
+    {
+        k=a[i];
+        fact=1;
+        while(k!=0)     
+        {
+            fact=fact*k;
+            k--;
+        }
+        sum=sum+fact;   
+    }
+    printf("sum of factorial of elements is %d",sum);
+}
+----------------------------------------------------------------------------
+OUTPUT:
+enter size of array  5
+enter elements  2
+3
+4
+5
+6
+sum of factorial of elements is 872
+*****************************************************************************
