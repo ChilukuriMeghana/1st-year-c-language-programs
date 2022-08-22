@@ -1,0 +1,41 @@
+1) c program to print Row sum value , where Row number is supplied by the user at run time
+-----------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,a[30][30],i,j,r,c,sum=0;
+    printf("enter no.of rows");
+    scanf("%d",&r);
+    printf("enter no.of columns");
+    scanf("%d",&c);
+    printf("enter the row to find sum");
+    scanf("%d",&n);
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    for(i=1;i<=r;i++)
+    {
+        for(j=1;j<=c;j++)
+        {
+            if(i==n)
+            {
+                sum=sum+a[i][j];
+            }
+        }
+    }
+    printf("%d\n",sum);
+}
+--------------------------------------------------------------
+OUTPUT:
+enter no.of rows  3
+enter no.of columns  3
+enter the row to find sum  2
+1 2 3 
+4 5 6
+7 8 9
+15
+*******************************************************
