@@ -1,0 +1,30 @@
+1) C program to read “n” value and display following pattern
+-----------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,i,j,k;
+    printf("enter n value");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        k=n;
+        for(j=1;j<=i;j++)
+        {
+            printf("%d ",k);
+            k--;
+        }
+        printf("\n");
+        
+    }
+}
+------------------------------------------------
+OUTPUT:
+enter n value 6
+6 
+6 5 
+6 5 4 
+6 5 4 3 
+6 5 4 3 2 
+6 5 4 3 2 1 
+********************************************
