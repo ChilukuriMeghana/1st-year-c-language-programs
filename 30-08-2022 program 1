@@ -1,0 +1,23 @@
+1) program to read a string and print all character "a" to uppercase and print string. 
+----------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    char str[20];
+    int i;
+    printf("enter a string");
+    gets(str);
+    for(i=1;str[i]!='\0';i++)
+    {
+        if(str[i]=='a')
+        {
+            str[i]=str[i]-32;
+        }
+    }
+    printf("%s",str);
+}
+--------------------------------------------
+OUTPUT:
+enter a string   aditya
+                         AdityA
+****************************************
