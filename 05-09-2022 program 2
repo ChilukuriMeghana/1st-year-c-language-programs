@@ -1,0 +1,41 @@
+1)program to  read n value. Read n elements into array. print n elements without using for loop
+-------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,a[15],s,i;
+    printf("enter n value");
+    scanf("%d",&n);
+    s=1;
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    display(a,s,n);
+}
+void display(int a[],int s,int n)
+{
+    if(s>n)
+    {
+        return;
+    }
+    else
+    {
+        printf("%d\n",a[s]);
+        display(a,s+1,n);
+    }
+}
+----------------------------------------------------------
+OUTPUT:
+enter n value   5
+1
+2
+3
+4
+5
+1
+2
+3
+4
+5
+********************************************************
