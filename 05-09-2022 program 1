@@ -1,0 +1,33 @@
+1) program to read n and m values. Print numbers between n and m without using for loop  (using recursion)
+-------------------------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,m;
+    printf("enter n,m values");
+    scanf("%d%d",&n,&m);
+    display(n,m);
+}
+void display(int n,int m)
+{
+    if(n>m)
+    {
+        return;
+    }
+    else
+    {
+        printf("%d\n",n);
+        display(n+1,m);
+    }
+}
+----------------------------------------
+OUTPUT:
+enter n,m values    4   10
+4
+5
+6
+7
+8
+9
+10
+**************************************
