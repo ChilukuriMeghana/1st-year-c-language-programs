@@ -1,0 +1,30 @@
+1) towers of hanoi (hacker rank program)
+-----------------------------------------------------
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() 
+{
+    int N;
+    char A,C,B;
+    scanf("%d",&N);
+    towers(N,'A','B','C');
+    return 0;
+}
+void towers(int N,char A,char B ,char C)
+{
+     if(N==1)
+     {
+         printf("\nMoving ring 1 from %c to %c",A,C);
+         return;
+     }
+    else
+    {
+        towers(N-1,A,B,C);
+        printf("\nMoving ring %d from %c to %c",N,A,B);
+        towers(N-1,A,C,B);
+    }
+}
+*****************************************************************
+
