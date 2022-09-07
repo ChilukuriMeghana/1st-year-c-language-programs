@@ -1,0 +1,31 @@
+1) Program to read n value. Read "n" numbers dynamically using pointers. Print sum of n numbers.
+-------------------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int n,sum=0,i;
+    printf("enter size of array");
+    scanf("%d",&n);
+    int *p;
+    p=(int*)malloc(n*(sizeof(int)));
+    for(i=1;i<=n;i++)
+    {
+        scanf("%d",p+i);
+    }
+    for(i=1;i<=n;i++)
+    {
+        sum=sum+*(p+i);
+    }
+    printf("sum is %d",sum);
+}
+-----------------------------------------
+OUTPUT:
+enter size of array  5
+1
+4
+6
+5
+8
+sum is 24
+***************************************
