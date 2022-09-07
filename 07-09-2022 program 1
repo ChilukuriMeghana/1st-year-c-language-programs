@@ -1,0 +1,48 @@
+1) program to read a number n. if the number is in fibonacci series print "Yes" otherwise "No"
+-----------------------------------------------------------------------------------------------------------------------
+#include<stdio.h>
+int main()
+{
+    int n,f1,f2,f3,flag=0,k;
+    printf("enter a number to find");
+    scanf("%d",&n);
+    k=n;
+    f1=0,f2=1;
+    if(n==0)
+    printf("yes");
+    else
+    {
+       // printf("%d ",f1);
+    //printf("%d ",f2);
+    f3=f1+f2;
+    while(f3<=n)
+    {
+       // printf("%d ",f3);
+        if(f3==k)
+        {
+           // printf("yes");
+           flag=1;
+            break;
+        }
+        f1=f2;
+        f2=f3;
+        f3=f1+f2;
+    }
+    if(flag==1)
+    {
+        printf("\nyes");
+    }
+    else
+    {
+        printf("\nno");
+    }
+    }
+    
+}
+----------------------------------------------------------
+OUTPUT:
+enter a number to find5
+yes
+enter a number to find 4
+no
+***************************************************
